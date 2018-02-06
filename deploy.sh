@@ -15,10 +15,6 @@ git init
 git add -A
 git config --local user.email ${GIT_COMMITTER_EMAIL}
 git config --local user.name ${GIT_COMMITTER_NAME}
-if git diff --quiet; then
-    echo "No changes to the output on this push; exiting."
-    exit 0
-fi
 git commit -m "Deploy to GitHub Pages @ $(date +'%Y-%m-%d %H:%M:%S.%N')"
 git push --force --quiet --set-upstream \
 	"https://${GH_TOKEN}@${HOST}/${REPO_USER}/${REPO_NAME}.git" ${REPO_BRANCH}  >/dev/null 2>&1
