@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development node index.js",
-    "build": "npm run pug2html && npm run stylus2css && npm run webpack2js",
-    "pug2html": "pug ./src/pug --disable-cache --compress --out ./dist/",
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && npm run pug2html && npm run stylus2css && npm run webpack2js",
+    "rebuild": "npm run clean && npm run build",
+    "pug2html": "pug ./src --disable-cache --compress --out ./dist/",
     "webpack2js": "webpack --display-error-details",
     "stylus2css": "mkdir -p ./dist/css && stylus ./src/css --disable-cache --compress --out ./dist/css",
     "test": "mocha",
