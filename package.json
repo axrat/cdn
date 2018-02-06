@@ -4,6 +4,7 @@
   "description": "private centent delivery network",
   "main": "index.js",
   "scripts": {
+    "install": "./bootstrap.sh",
     "start": "NODE_ENV=development node index.js",
     "build": "npm run pug2html && npm run webpack2js && npm run stylus2css",
     "pug2html": "pug ./src/pug --disable-cache --compress --out ./dist/",
