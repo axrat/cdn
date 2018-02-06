@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="webpack2js" type="js.build_tools.npm" factoryName="npm">
+  <configuration default="false" name="build" type="js.build_tools.npm" factoryName="npm" singleton="false">
     <package-json value="$PROJECT_DIR$/package.json" />
     <command value="run-script" />
     <scripts>
-      <script value="webpack2js" />
+      <script value="build" />
     </scripts>
     <node-interpreter value="project" />
     <envs />

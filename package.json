@@ -4,10 +4,11 @@
   "description": "private centent delivery network",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --display-error-details",
     "start": "NODE_ENV=development node index.js",
+    "build": "npm run pug2html && npm run webpack2js && npm run stylus2css",
     "pug2html": "pug ./src/pug --disable-cache --compress --out ./dist/",
-    "stylus2css": "stylus ./src/css --disable-cache --compress --out ./dist/css",
+    "webpack2js": "webpack --display-error-details",
+    "stylus2css": "mkdir -p ./dist/css && stylus ./src/css --disable-cache --compress --out ./dist/css",
     "test": "mocha",
     "error": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,8 +30,7 @@
     "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "sqlite3": "^3.1.13"
