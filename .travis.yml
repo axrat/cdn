@@ -1,8 +1,19 @@
 language: node_js
-before_install:
-  - npm i -g npm@5.3.0
+
+notifications:
+  enmail:
+    on_success: never
+    on_failure: always
+
 node_js:
   - 8
+
 branches:
   only:
       - master
+
+before_install:
+  - npm i -g npm@5.3.0
+
+script:
+    - bash deploy.sh
