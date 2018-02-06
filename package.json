@@ -6,7 +6,7 @@
   "scripts": {
     "install": "./install.sh",
     "start": "NODE_ENV=development node index.js",
-    "build": "npm run pug2html && npm run webpack2js && npm run stylus2css",
+    "build": "npm run pug2html && npm run stylus2css && npm run webpack2js",
     "pug2html": "pug ./src/pug --disable-cache --compress --out ./dist/",
     "webpack2js": "webpack --display-error-details",
     "stylus2css": "mkdir -p ./dist/css && stylus ./src/css --disable-cache --compress --out ./dist/css",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/onoie/cdn#readme",
   "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
