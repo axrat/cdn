@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Struct */
+/*
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+  <body>
+    <header id="header"><div class="container"></div></header>
+    <hr/>
+    <div id="before"><div class="container"></div></div>
+    <section id="main"><div class="container"></div></section>
+    <div id="after"><div class="container"></div></div>
+    <hr/>
+    <footer id="footer"><div class="container"></div></footer>
+  </body>
+</html>
+*/
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    border-bottom: 1px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+header .container,
+footer .container,
+section .container {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+header .container {
+    padding-top: 5px;
+}
+
+footer .container {
+    padding-bottom: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#before .container,
+#after .container {
+    padding: 3px 5px 3px 5px;
+}

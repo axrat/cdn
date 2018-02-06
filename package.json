@@ -1,0 +1,34 @@
+{
+  "name": "cdn",
+  "version": "0.1.0",
+  "description": "private centent delivery network",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --display-error-details",
+    "start": "NODE_ENV=development node index.js",
+    "stylus2css": "stylus ./src/css --disable-cache --compress --out ./dist/css",
+    "test": "mocha",
+    "error": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onoie/cdn.git"
+  },
+  "author": "onoie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onoie/cdn/issues"
+  },
+  "homepage": "https://github.com/onoie/cdn#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "mocha": "^5.0.0",
+    "stylus": "^0.54.5",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "sqlite3": "^3.1.13"
+  }
+}
