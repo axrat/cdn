@@ -1,6 +1,6 @@
 # cdn
 [![Build Status](https://travis-ci.org/onoie/cdn.svg?branch=master)](https://travis-ci.org/onoie/cdn)
-private content delivery network
+
 ## production
 ```
 //cdn.rawgit.com/onoie/cdn/gh-pages/css/style.css
