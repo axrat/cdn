@@ -18,10 +18,6 @@ module.exports = {
           presets:['es2015']
         }
       },
-      {
-        test: /\.pug$/,
-        loader: 'pug-loader'
-      },
     ]
   }
 };
