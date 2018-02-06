@@ -5,8 +5,6 @@ if [ $# -ne 1 ]; then
 fi
 GIT_COMMITTER_NAME="onoie"
 GIT_COMMITTER_EMAIL="onoie3@gmail.com"
-GIT_AUTHOR_NAME=${GIT_COMMITTER_NAME}
-GIT_AUTHOR_EMAIL=${GIT_COMMITTER_EMAIL}
 HOST="github.com"
 REPO_USER="onoie"
 REPO_NAME="cdn"
@@ -22,8 +20,6 @@ if git diff --quiet; then
     exit 0
 fi
 git commit -m "Deploy to GitHub Pages @ $(date +'%Y-%m-%d %H:%M:%S.%N')"
-if $GH_TOKEN; then
-	git push --force --quiet --set-upstream \
-		"https://${GH_TOKEN}@${HOST}/${REPO_USER}/${REPO_NAME}.git" ${REPO_BRANCH}  >/dev/null 2>&1
-	echo "complete"
-fi
+git push --force --quiet --set-upstream \
+	"https://${GH_TOKEN}@${HOST}/${REPO_USER}/${REPO_NAME}.git" ${REPO_BRANCH}  >/dev/null 2>&1
+echo "complete"

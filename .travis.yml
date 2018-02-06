@@ -26,21 +26,5 @@ before_install:
 
 script:
     - npm test
-#    - npm run-script build
-#    - bash deploy.sh
-
-env:
-  - GH_USER_NAME=onoie
-  - GH_USER_EMAIL=onoie3@gmail.com
-after_success:
-  - |
-
-    $(npm bin)/set-up-ssh --key "$encrypted_c773c3304006_key" \
-                       --iv "$encrypted_c773c3304006_iv" \
-                       --path-encrypted-key ".travis/github_deploy_key.enc"
-  -|
-    $(npm bin)/update-branch --commands "npm run build" \
-                             --commit-message "Hey GitHub, this content is for you! [skip ci]" \
-                             --directory "dist" \
-                             --distribution-branch "gh-pages" \
-                             --source-branch "master"
+    - npm run-script build
+    - bash deploy.sh
