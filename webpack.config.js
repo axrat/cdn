@@ -4,6 +4,10 @@ module.exports = {
     path:　__dirname + '/dist/js',
     filename: 'bundle.js'
   },
+  devServer: {
+    contentBase: 'www',
+    port: 3000
+  },
   module: {
     loaders: [
       {
@@ -13,7 +17,11 @@ module.exports = {
         query:{
           presets:['es2015']
         }
-      }
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
     ]
   }
 };
