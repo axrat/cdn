@@ -1,7 +1,7 @@
-import {hello} from './src/js/hello'
-console.log(hello);
-import './src/css/test.styl'
+require('./src/css/test.styl');
+var hello = require('./src/js/hello');
 window.onload = function() {
-  document.getElementById(`hello_webpack`).innerHTML = `hello,webpack!`;
+  hello();
+  document.getElementById('hello_webpack').innerHTML = 'hello,webpack!';
 };
 

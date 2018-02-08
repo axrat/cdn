@@ -1,1 +1,3 @@
-export const hello = 'HelloWorld';
+module.exports = function() {
+  console.log('HelloWorld');
+};
