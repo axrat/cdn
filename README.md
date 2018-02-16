@@ -1,11 +1,14 @@
 # cdn
-[![Build Status](https://travis-ci.org/onoie/cdn.svg?branch=master)](https://travis-ci.org/onoie/cdn)
+[![Build Status](https://travis-ci.org/axrat/cdn.svg?branch=master)](https://travis-ci.org/axrat/cdn)
 
-## production
-```
-//cdn.rawgit.com/onoie/cdn/gh-pages/css/style.css
-```
 ## development
 ```
-//rawgit.com/onoie/cdn/gh-pages/css/style.css
+<link rel="stylesheet" href="//rawgit.com/axrat/cdn/gh-pages/css/style.css"/>
+<script src="//rawgit.com/axrat/cdn/gh-pages/js/script.js"></script>
 ```
+## production
+```
+<link rel="stylesheet" href="//cdn.rawgit.com/axrat/cdn/gh-pages/css/style.css"/>
+<script src="//cdn.rawgit.com/axrat/cdn/gh-pages/js/script.js"></script>
+```
+
