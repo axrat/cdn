@@ -8,7 +8,9 @@ REPO_BRANCH="gh-pages"
 git config --local user.email ${GIT_COMMITTER_EMAIL}
 git config --local user.name ${GIT_COMMITTER_NAME}
 git checkout --orphan ${REPO_BRANCH}
+mkdir -p dist
 mv .git ./dist/
+cp -rf src/img dist/img
 cd dist
 git add -A
 git commit -m "Deploy to GitHub Pages @ $(date +'%Y-%m-%d %H:%M:%S.%N')"
