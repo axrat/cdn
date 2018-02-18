@@ -2,15 +2,15 @@
 GIT_COMMITTER_NAME="onoie"
 GIT_COMMITTER_EMAIL="onoie3@gmail.com"
 HOST="github.com"
-REPO_USER="onoie"
+REPO_USER="axrat"
 REPO_NAME="cdn"
 REPO_BRANCH="gh-pages"
 git config --local user.email ${GIT_COMMITTER_EMAIL}
 git config --local user.name ${GIT_COMMITTER_NAME}
 git checkout --orphan ${REPO_BRANCH}
 mkdir -p dist
-mv .git ./dist/
 cp -rf src/img dist/img
+mv .git ./dist/
 cd dist
 git add -A
 git commit -m "Deploy to GitHub Pages @ $(date +'%Y-%m-%d %H:%M:%S.%N')"
