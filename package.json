@@ -11,6 +11,7 @@
     "rebuild": "npm run clean && npm run build",
     "pug2html": "pug ./src --disable-cache --compress --out ./dist/",
     "webpack2js": "webpack --colors --display-error-details",
+    "uglify2js": "uglifyjs dist/js/bundle.js -o dist/js/bundle.min.js -c -m",
     "stylus2css": "mkdir -p ./dist/css && stylus ./src/css --disable-cache --compress --out ./dist/css",
     "test": "mocha",
     "error": "echo \"Error\" && exit 1"
@@ -44,6 +45,7 @@
     "style-loader": "^0.20.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "uglify-es": "^3.3.9",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
   },
