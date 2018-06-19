@@ -1,8 +1,8 @@
 module.exports = function () {
   console.log('HelloWorld');
 };
-function GetScriptParams() {
-    var scripts = document.getElementsByTagName( 'script' );
+exports.getScriptParams = function () {
+  var scripts = document.getElementsByTagName( 'script' );
     var src = scripts[ scripts.length - 1 ].src;
     var query = src.substring( src.indexOf( '?' ) + 1 );
     var parameters = query.split( '&' );
